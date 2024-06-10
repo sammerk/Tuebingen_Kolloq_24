@@ -1,0 +1,286 @@
+---
+title: "Warum die meisten bildungswissenschaftlichen Erkenntnise falsch sind"
+subtitle: "Und evidenzorientierte Praxis dennoch Sinn macht"
+author: Samuel Merk
+footer: "Samuel Merk | Pädagogische Hochschule Karlsruhe"
+institute: Institut für Schul- und Unterrichtsentwicklung
+logo: img/PH_logo.png
+picture: img/KA.jpeg
+date: today
+lang: de
+date-format: "dddd, [den] D. MMMM, YYYY"
+embed-resources: false
+format: rlille-revealjs
+lightbox: true
+bibliography: references.bib
+csl: apa.csl
+---
+
+
+## Agenda
+<style>
+div.callout-tip {border-left-color: #267326 !important;}
+</style>
+
+```{r }
+#| label: libraries
+#| echo: false
+library(fontawesome)
+library(tinytable)
+library(tidyverse)
+library(countdown)
+```
+
+
+| {{< iconify fa6-solid diagram-project >}}  | Das Ausgangsproblem             |
+|-------------------------------------------:|:---------------------------------
+| {{< iconify fa6-solid scale-unbalanced >}} | Evidenz(informierte Praxis)     |
+| {{< iconify fa6-solid bolt-lightning >}}   | Why most finding are false      |
+| {{< iconify fa6-solid sun >}}              | Scientific Utopia               |
+
+: {#tbl-agenda tbl-colwidths="[10,90]"}
+
+<!-- style the agenda table -->
+<style>
+#tbl-agenda table th {
+font-weight: normal !important;
+border: none !important;
+}
+
+#tbl-agenda table td {
+font-weight: normal !important;
+border: none !important;
+}
+</style>
+
+
+::: footer
+{{< iconify academicons:open-materials >}} Folien cc-by {{< iconify academicons:creative-commons-by >}} unter [https://bit.ly/merk123](https://bit.ly/merk123)
+:::
+
+
+# Ausgangsproblem {.center .center-x}
+
+## Ausgangsproblem
+
+:::: {.columns}
+::: {.column width='49%'}
+
+#### Evidenzinf. Praxis
+::: {.fragment}
+![](img/scale4000.png){width=50%}
+:::
+:::
+
+::: {.column width='49%'}
+#### Replikationskrise(n)
+::: {.r-stack}
+![](img/repcrisis_zeit.jpg){.fragment width=90% fig-align="center"}
+
+![](img/repcrisis_guardian.jpg){.fragment width=80% fig-align="center"}
+
+![](img/repcrisis_gelman.jpg){.fragment width=70% fig-align="center"}
+
+![](img/repcrisis_science.jpg){.fragment width=65% fig-align="center"}
+:::
+:::
+::::
+
+::: {.fragment}
+> Wenn nur 3 von 10 Studien repliziert werden können, ist dann eine Münze zu werfen nicht erfolgsversprechender als evidenzorientiert zu handeln?
+:::
+
+# Evidenzinformierte Praxis {.center .center-x}
+
+
+## Was ist »Evidenz«?
+::: {.fragment}
+{{< video https://vimeo.com/954440038 width="1500" height="600">}}
+::: 
+
+## Was ist »Evidenz«? {.smaller}
+> Besprechen Sie 4 Minuten mit der Sitznachbarin: <br> *Was verbinden Sie mit dem Begriff »Evidenz«? <br> Welche Definitionen von Evidenz kennen Sie?*
+
+:::{.callout-tip collapse=false appearance='default' icon=false}
+## {{< iconify fa6>}} Zusätzliche Denkanstöße 
+- Was ist der Unterschied zwischen Evidenz und Wahrheit?
+- Wie lässt sich Evidenz in statistischen Modellen formalisieren?
+- Geben *p*-Werte Auskunft über Evidenz?
+- Ist der Begriff der Evidenz von Wahrheitsdefinitionen abhängig?
+:::
+
+
+`r countdown(minutes = 4, seconds = 0, right = "40%", bottom = "10%", color_border = "#267326", color_running_background = "#26732670")`
+             
+## »Evidenz« - in der Alltagssprache {.smaller}
+#### Ethymologie
+* Ableitung vom Adjektiv _»evident«_ [@kluge2011, S.263] 
+* _»evident«_ wurde im 18 Jhd. aus dem lateinischen Adjektiv _»evidens«_,  [ersichtlich, augenscheinlich, @hau2016] entlehnt.
+* _»evidens«_ wiederum entstammt dem Verb _»videre«_ [sehen, @hau2016]
+
+:::: {.columns}
+
+::: {.column width='55%'}
+::: {.fragment}
+#### Verwendung: »Evidenz«
+* _»Evidenz«_ nach  in Wörterbüchern unmittelbare Einsichtigkeit, faktische Gegebenheit, Ablage oder »empirisch erbrachter Nachweis der Wirksamkeit eines Präparats, einer Therapieform o. Ä.« [@kunkel-razum2023]
+* _»evidence«_ meint im Englischen _»Nachweis, Beweis, Beleg«_ [@stark2017]   
+:::
+:::
+
+::: {.column width='45%'}
+::: {.fragment}
+#### Prävalenz
+```{r}
+#| echo: false
+#| fig-height: 5
+
+data_verwendung_evidenz <- 
+   tibble(
+     `»Evidenz«` = c(
+       0.0822948823548123, 0.0864467101602001, 0.113276959546673, 0.13999394840173,
+       0.13573359293446, 0.131708932942091, 0.136861672940761, 0.143452484680887, 
+       0.142279076479901, 0.106932189840039, 0.0704499451924082, 0.0633145580863124,
+       0.0519896417532422, 0.0663484052171933, 0.070728948180559, 0.0837050966314184,
+       0.12482506771421, 0.15745974497631, 0.221482693322517, 0.234665378078507,
+       0.23924913470157, 0.299418506561544, 0.311640974850378, 0.285112938063258, 
+       0.270603910337625, 0.246680623082617, 0.279969245129795, 0.257019732363425,
+       0.205722519060645, 0.191750950885163, 0.216231350874723, 0.220777302778072, 
+       0.227080058161387, 0.228657273320447, 0.254382492323234, 0.274430462702841,
+       0.275969336775004, 0.265934421908756, 0.26687994658747, 0.310328032561805, 
+       0.311797466701208, 0.339732373142935, 0.343005847844141, 0.372911781205623,
+       0.424608470085374, 0.468843296452663, 0.463202162689663, 0.468726961484799, 
+       0.467778757575889, 0.522851471492953, 0.576123784456921, 0.617487668617142, 
+       0.663304687022645, 0.701862901064268, 0.735968415204076, 0.765031136080774,
+       0.801908091702316, 0.813333638194281, 0.800945564994825, 0.792230464532756,
+       0.779424751119589, 0.781896151808327, 0.78483707262466, 0.751986709794611, 
+       0.743756523074073, 0.775033071799381, 0.763696179101889, 0.742703859348818,
+       0.752610947977049, 0.851857796272815, 1.00293422376183, 1.29230277283723, 
+       1.73459240137247, 1.90698463274771, 2.16382418991153, 2.5072030372292 ),
+     X = 1946:2021,
+     `»evidenzbasiert«` = 
+       c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+           0, 0, 0, 0.0112025415733449, 0.0181766029628592, 0.0257290561046502,
+           0.0344309501547322, 0.051792022459627, 0.0732368796153364, 
+           0.0906637532964253, 0.105562901199919, 0.126556340153599, 
+           0.153288236780401, 0.189563107845902, 0.226083351505016, 
+           0.250985870222063, 0.283785580649933, 0.301511433337405, 
+           0.335277426785241, 0.388381383618801, 0.408261921131379, 
+           0.419872079149944, 0.460371824226692, 0.516206220292182, 
+           0.577488114394082, 0.644987122530188, 0.762533660651294, 
+           0.813955751026988, 0.885058837656782, 0.954341085409344)
+   ) %>% 
+  gather(var, val, -X)
+
+library(hrbrthemes)
+ggplot(data_verwendung_evidenz,
+       aes(X, val)) + 
+  geom_point(color = "#267326") + 
+  facet_wrap(~var, ncol = 2, scales = "free") +
+  geom_smooth(color = "#26732670", se = F) +
+  theme_modern_rc() +
+  ggtitle("Frequenz »Evidenz« und »evidenzbasiert«", 
+          "im DWDS Zeitungskorpus") +
+  labs(caption = "Daten: DWDS – Digitales Wörterbuch der deutschen Sprache.\nBerlin-Brandenburgischen Akademie der Wissenschaften, abgerufen am 31.10.2021.") + 
+  xlab("") +
+  ylab("Häufigkeit pro 1 Mio. Tokens") +
+  theme(strip.text = element_text(color = "white"))
+```
+:::
+:::
+::::
+
+
+## »Evidenz« - in der Bildungsforschung {.smaller}
+:::: {.columns}
+
+::: {.column width='55%'}
+::: {.fragment}
+> [...] wird Evidenz – abweichend von Konzeptionen evidenzbasierter Medizin – pragmatisch im Sinn von »wissenschaftlichem Wissen« verwendet [@stark2017].
+
+
+> Wenn [...] Daten dazu dienen, Vermutungen, Hypothesen oder Theorien zu stützen – oder zu widerlegen – erhalten sie die Funktion von »Evidenz« [@bromme2014b].
+:::
+:::
+
+::: {.column width='45%'}
+::: {.fragment}
+![Enge und weite Evidenzbegriffe nach @schmidt2024](img/EvidenzbegriffeSchmidt.png)
+:::
+:::
+
+::::
+
+## Evidenzinformierte Praxis {.center .center-x}
+
+:::: {.columns}
+
+::: {.column width='50%'}
+![Nach @brown2017](img/EIPBrown.png){width=96% fig-align="left"}
+:::
+
+::: {.column width='50%'}
+![Nach @grossophoff2023](img/GroßOph.png){width=96% fig-align="left"}
+:::
+
+::::
+
+# [Why most findings are false]{style="font-size: .8em;"} {.center .center-x}
+
+## Why most findings are (probably) false {.smaller}
+::: {.incremental}
+* Lebendige Diskussion um ***Replizierbarkeit*** in Sozialwissenschaften, Biomedizin & (Verhaltens-)Ökonomie seit Anfang der 2010er [@ritchie2020]
+* Diskutierte Ursachen (u.a.): 
+  * Publication Bias [@sterling1959]
+  * Fragwürdige Forschungspraktiken [geschätze Prävalenz nach @john2012]: Selective  Reporting (67%), Optional Stoping (58%), UV verschweigen (28%), HARKing (35%), Falsifying Data (2%)
+  * Base Rate Fallacy [@ioannidis2005, @smaldino2016]
+:::
+
+## Low Base Rate $\Rightarrow$ Many False Positives {.smaller}
+> Sie machen eine Studie mit 80% Power und einem Signifikanzniveau von 5%. Sie finden ein signifikantes Ergebnis. Wie wahrscheinlich ist es, dass das Ergebnis tatsächlich wahr ist?
+
+:::: {.columns}
+
+::: {.column width='50%'}
+::: {.fragment}
+![](img/BaseRateFallacy.png){width=100%}
+:::
+:::
+
+::: {.column width='50%'}
+::: {.fragment}
+<br><br><br>
+$$\operatorname{Pr}(W |+)=\frac{\operatorname{Pr}(+ | W) \operatorname{Pr}(W)}{\operatorname{Pr}(+ | W) \operatorname{Pr}(W)+\operatorname{Pr}(+ | F) \operatorname{Pr}(F)}$$
+:::
+:::
+
+::::
+
+
+
+
+
+
+## Dennoch evidenzorientierte Praxis? {.smaller}
+**Unbedingt**, denn:
+
+* Ausgangsproblem enthält zwei »Unschärfen«
+    * Replizierbarkeit ≠ Wahrheit
+    * Münzwurf ≠ $\operatorname{Pr}(W |+)$
+    
+. . .
+
+* Die Probleme evidenzorientierter Praxis sind auch in intuitiven Entscheidungen vorhanden
+    * Publication Bias $\Rightarrow$ Confirmation Bias [@nickerson1998; @schmidt2022a], etc.
+    * Fragwürdige Forschungspraktiken $\Rightarrow$ Hindsight Bias [@masnick2009]
+    * Geringere Theoriebasierung $\Rightarrow$ kleinere Basisrate
+
+. . .
+
+> [...] if we are very careful and try very hard, we might not completely mislead ourselves [@mcelreath2024]
+
+## Literatur
+::: footer
+ 
+:::
