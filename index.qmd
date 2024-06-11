@@ -34,9 +34,10 @@ library(countdown)
 
 | {{< iconify fa6-solid diagram-project >}}  | Das Ausgangsproblem             |
 |-------------------------------------------:|:---------------------------------
-| {{< iconify fa6-solid scale-unbalanced >}} | Evidenz(informierte Praxis)     |
-| {{< iconify fa6-solid bolt-lightning >}}   | Why most finding are false      |
-| {{< iconify fa6-solid sun >}}              | Scientific Utopia               |
+| {{< iconify fa6-solid scale-unbalanced >}} | Evidenz(informierte Praxis)      |
+| {{< iconify fa6-solid bolt-lightning >}}   | Why most finding are false       |
+| {{< iconify fa6-solid scale-unbalanced >}} | Dennoch evidenzinformierte Praxis|
+| {{< iconify fa6-solid sun >}}              | Scientific Utopia                |
 
 : {#tbl-agenda tbl-colwidths="[10,90]"}
 
@@ -55,7 +56,7 @@ border: none !important;
 
 
 ::: footer
-{{< iconify academicons:open-materials >}} Folien cc-by {{< iconify academicons:creative-commons-by >}} unter [https://bit.ly/merk123](https://bit.ly/merk123)
+{{< iconify academicons:open-materials >}} Folien cc-by {{< iconify academicons:creative-commons-by >}} unter [https://bit.ly/merk234](https://bit.ly/merk234)
 :::
 
 
@@ -71,8 +72,13 @@ border: none !important;
 ![](img/scale4000.png){width=50%}
 :::
 :::
-
 ::: {.column width='49%'}
+
+::: footer
+{{< iconify academicons:open-materials >}} Folien cc-by {{< iconify academicons:creative-commons-by >}} unter [https://bit.ly/merk234](https://bit.ly/merk234)
+:::
+
+
 #### Replikationskrise(n)
 ::: {.r-stack}
 ![](img/repcrisis_zeit.jpg){.fragment width=90% fig-align="center"}
@@ -114,23 +120,26 @@ border: none !important;
              
 ## »Evidenz« - in der Alltagssprache {.smaller}
 #### Ethymologie
+::: {.fragment}
 * Ableitung vom Adjektiv _»evident«_ [@kluge2011, S.263] 
 * _»evident«_ wurde im 18 Jhd. aus dem lateinischen Adjektiv _»evidens«_,  [ersichtlich, augenscheinlich, @hau2016] entlehnt.
 * _»evidens«_ wiederum entstammt dem Verb _»videre«_ [sehen, @hau2016]
-
+:::
 :::: {.columns}
 
 ::: {.column width='55%'}
+
+#### Verwendung: 
 ::: {.fragment}
-#### Verwendung: »Evidenz«
 * _»Evidenz«_ nach  in Wörterbüchern unmittelbare Einsichtigkeit, faktische Gegebenheit, Ablage oder »empirisch erbrachter Nachweis der Wirksamkeit eines Präparats, einer Therapieform o. Ä.« [@kunkel-razum2023]
 * _»evidence«_ meint im Englischen _»Nachweis, Beweis, Beleg«_ [@stark2017]   
 :::
 :::
 
 ::: {.column width='45%'}
-::: {.fragment}
+
 #### Prävalenz
+::: {.fragment}
 ```{r}
 #| echo: false
 #| fig-height: 5
@@ -206,7 +215,7 @@ ggplot(data_verwendung_evidenz,
 
 ::: {.column width='45%'}
 ::: {.fragment}
-![Enge und weite Evidenzbegriffe nach @schmidt2024](img/EvidenzbegriffeSchmidt.png)
+![Enge und weite Evidenzbegriffe nach @schmidt2024](img/EvidenzBegriffe.png)
 :::
 :::
 
@@ -230,7 +239,7 @@ ggplot(data_verwendung_evidenz,
 
 ## Why most findings are (probably) false {.smaller}
 ::: {.incremental}
-* Lebendige Diskussion um ***Replizierbarkeit*** in Sozialwissenschaften, Biomedizin & (Verhaltens-)Ökonomie seit Anfang der 2010er [@ritchie2020]
+* Lebendige Diskussion um ***Replizierbarkeit*** in Sozialwissenschaften, Biomedizin & Verhaltensökonomie seit Anfang der 2010er [@ritchie2020]
 * Diskutierte Ursachen (u.a.): 
   * Publication Bias [@sterling1959]
   * Fragwürdige Forschungspraktiken [geschätze Prävalenz nach @john2012]: Selective  Reporting (67%), Optional Stoping (58%), UV verschweigen (28%), HARKing (35%), Falsifying Data (2%)
@@ -258,10 +267,6 @@ $$\operatorname{Pr}(W |+)=\frac{\operatorname{Pr}(+ | W) \operatorname{Pr}(W)}{\
 ::::
 
 
-
-
-
-
 ## Dennoch evidenzorientierte Praxis? {.smaller}
 **Unbedingt**, denn:
 
@@ -279,6 +284,24 @@ $$\operatorname{Pr}(W |+)=\frac{\operatorname{Pr}(+ | W) \operatorname{Pr}(W)}{\
 . . .
 
 > [...] if we are very careful and try very hard, we might not completely mislead ourselves [@mcelreath2024]
+
+## Scientific Utopia
+:::: {.columns}
+
+::: {.column width='40%'}
+![](img/BaseRateFallacy.png){width=100%}
+:::
+
+::: {.column width='60%'}
+Base Rate Fallacy impliziert für weniger falsch-positive Befunde:
+
+* Höhere Basisraten $\Rightarrow$ Bessere theoretische Fundierung
+* Geringere $\alpha$-Fehler $\Rightarrow$ Präregistrierung (je strenger je besser), Replikationen, Metaanalysen
+* Geringere $\beta$-Fehler $\Rightarrow$ Poweranalysen, Many Lab Studies
+:::
+
+::::
+
 
 ## Literatur
 ::: footer
